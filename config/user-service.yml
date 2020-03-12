@@ -14,7 +14,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka #向eureka进行注册
-      
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh   
 ---
 spring:
   profiles: user1
